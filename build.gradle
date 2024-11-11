@@ -1,0 +1,47 @@
+plugins {
+    id "java"
+    id "jigsaw"
+    id "com.github.johnrengelman.shadow"
+}
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        "cosmicsigns" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+    accessWidenerPath = file("src/main/resources/ui-tweaks.manipulator")
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    cosmicReach("finalforeach:cosmicreach:${cosmic_reach_version}")
+}
+
+processResources {
+    // Locations of where to inject the properties
+    def resourceTargets = [ "puzzle.mod.json" ]
+
+    // Left item is the name in the target, right is the varuable name
+    def replaceProperties = [
+            "mod_version"     : version,
+            "mod_desc"       : desc,
+            "mod_name"        : project.name,
+            "mod_id"          : id,
+    ]
+
+
+    inputs.properties replaceProperties
+    replaceProperties.put "project", project
+    filesMatching(resourceTargets) {
+        expand replaceProperties
+    }
+}

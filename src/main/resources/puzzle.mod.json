@@ -1,0 +1,26 @@
+{
+  "formatVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "UI Tweaks",
+  "description": "${mod_desc}",
+  "authors": [
+    "SpaceNerd24"
+  ],
+  "meta": {
+    "icon": "ui-tweaks:icons/icon.png"
+  },
+  "entrypoints": {
+    "client_init": [
+      "com.spacenerd24.ui_tweaks.ClientInitializer"
+    ]
+  },
+  "mixins": [
+    "ui-tweaks.mixins.json"
+  ],
+  "depends": {
+    "cosmic-reach": ">=0.3.6",
+    "puzzle-loader": ">=2.0.9"
+  },
+  "accessManipulator": "ui-tweaks.manipulator"
+}

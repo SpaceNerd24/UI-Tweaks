@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.spacenerd24.ui_tweaks.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "MainMenuMixin",
+    "SettingsMixin",
+    "PreAlphaMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
