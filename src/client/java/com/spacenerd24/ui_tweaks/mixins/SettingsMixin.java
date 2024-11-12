@@ -1,15 +1,9 @@
 package com.spacenerd24.ui_tweaks.mixins;
 
-import com.badlogic.gdx.Files;
-import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.JsonReader;
-import com.badlogic.gdx.utils.JsonWriter;
 import com.spacenerd24.ui_tweaks.Constants;
-import finalforeach.cosmicreach.GameSingletons;
-import finalforeach.cosmicreach.gamestates.OptionsMenu;
 import finalforeach.cosmicreach.io.SaveLocation;
 import finalforeach.cosmicreach.settings.GameSetting;
-import finalforeach.cosmicreach.settings.SettingsDictionary;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

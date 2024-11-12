@@ -1,13 +1,9 @@
 package com.spacenerd24.ui_tweaks.mixins;
 
-import com.badlogic.gdx.Game;
 import com.spacenerd24.ui_tweaks.Constants;
-import com.spacenerd24.ui_tweaks.CustomOptionsMenu;
 import finalforeach.cosmicreach.gamestates.GameState;
 import finalforeach.cosmicreach.gamestates.MainMenu;
 import finalforeach.cosmicreach.gamestates.PrealphaPreamble;
-import finalforeach.cosmicreach.ui.HorizontalAnchor;
-import finalforeach.cosmicreach.ui.UIElement;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

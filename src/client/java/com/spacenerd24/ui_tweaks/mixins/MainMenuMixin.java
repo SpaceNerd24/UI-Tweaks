@@ -2,7 +2,6 @@ package com.spacenerd24.ui_tweaks.mixins;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.github.puzzle.game.common.Puzzle;
 import com.spacenerd24.ui_tweaks.CustomOptionsMenu;

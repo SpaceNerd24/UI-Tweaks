@@ -1,20 +1,13 @@
 package com.spacenerd24.ui_tweaks;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.github.puzzle.game.common.Puzzle;
-import finalforeach.cosmicreach.GameSingletons;
 import finalforeach.cosmicreach.gamestates.GameState;
 import finalforeach.cosmicreach.gamestates.MainMenu;
-import finalforeach.cosmicreach.gamestates.OptionsMenu;
 import finalforeach.cosmicreach.lang.Lang;
-import finalforeach.cosmicreach.settings.GraphicsSettings;
 import finalforeach.cosmicreach.ui.*;
-import org.jline.utils.Display;
 
 public class CustomOptionsMenu extends GameState {
     private final static String fullscreenText = "Fullscreen: ";

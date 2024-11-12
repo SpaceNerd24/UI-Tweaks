@@ -1,8 +1,6 @@
 package com.spacenerd24.ui_tweaks.mixins;
 
-import finalforeach.cosmicreach.entities.player.Player;
 import finalforeach.cosmicreach.gamestates.GameState;
-import finalforeach.cosmicreach.gamestates.InGame;
 import finalforeach.cosmicreach.gamestates.LoadingGame;
 import finalforeach.cosmicreach.gamestates.MainMenu;
 import finalforeach.cosmicreach.ui.HorizontalAnchor;
