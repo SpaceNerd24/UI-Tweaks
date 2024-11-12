@@ -2,6 +2,7 @@ package com.spacenerd24.ui_tweaks;
 
 import com.badlogic.gdx.utils.Json;
 import finalforeach.cosmicreach.settings.BooleanSetting;
+import finalforeach.cosmicreach.settings.Keybind;
 import finalforeach.cosmicreach.settings.SettingsDictionary;
 import finalforeach.cosmicreach.util.Identifier;
 import org.apache.logging.log4j.LogManager;
@@ -17,9 +18,9 @@ public class Constants {
     public static final Json JSON = new Json();
     public static final String version = "v1.1.0";
 
-    public static BooleanSetting fulscreen = new BooleanSetting("fullscreen", false);;
-    public static BooleanSetting showPuzzleVersion = new BooleanSetting("showpuzzleversion", true);;
-    public static BooleanSetting noPreAlpha = new BooleanSetting("noprealpha", true);;
+    public static BooleanSetting fulscreen = new BooleanSetting("fullscreen", false);
+    public static BooleanSetting showPuzzleVersion = new BooleanSetting("showpuzzleversion", true);
+    public static BooleanSetting noPreAlpha = new BooleanSetting("noprealpha", true);
 
     public static int windowWidth = 0;
     public static int windowHeight =  0;

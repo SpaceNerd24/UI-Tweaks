@@ -65,7 +65,7 @@ public class MainMenuMixin extends GameState {
             batch.begin();
             Vector2 TextDim2 = new Vector2();
             float y2 = -80.0F;
-            String customText2 = "Puzzle Loader Version: " + Puzzle.VERSION;
+            String customText2 = "Puzzle Loader Version: " + com.github.puzzle.core.Constants.getVersion();
             FontRenderer.getTextDimensions(this.uiViewport, customText2, TextDim2);
             batch.setColor(Color.GRAY);
             FontRenderer.drawText(batch, this.uiViewport, customText2, -7.0F, y2 + 1.0F, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);

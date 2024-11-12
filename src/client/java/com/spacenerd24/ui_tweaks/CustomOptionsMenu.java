@@ -37,6 +37,15 @@ public class CustomOptionsMenu extends GameState {
         };
         showPuzzleVersionButton.show();
         this.uiObjects.add(showPuzzleVersionButton);
+        UIElement customKeybinds = new UIElement(0.0F, -20.0F, 250.0F, 50.0F) {
+            public void onClick() {
+                super.onClick();
+                GameState.switchToGameState(new CustomKeybindsMenu());
+            }
+        };
+        customKeybinds.setText("Modded Keybinds");
+        customKeybinds.show();
+        //this.uiObjects.add(customKeybinds);
         UIElement exitButton = new UIElement(0.0F, 200.0F, 250.0F, 50.0F) {
             public void onClick() {
                 super.onClick();
@@ -68,15 +77,14 @@ public class CustomOptionsMenu extends GameState {
         }
         batch.setProjectionMatrix(this.uiCamera.combined);
         batch.begin();
-        Vector2 promoTextDim = new Vector2();
+        Vector2 TextDim = new Vector2();
         float y = -10.0F;
         String customText = "UI-Tweaks Version: " + Constants.version;
-        FontRenderer.getTextDimensions(this.uiViewport, customText, promoTextDim);
+        FontRenderer.getTextDimensions(this.uiViewport, customText, TextDim);
         batch.setColor(Color.GRAY);
         FontRenderer.drawText(batch, this.uiViewport, customText, -7.0F, y + 1.0F, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);
         batch.setColor(Color.WHITE);
         FontRenderer.drawText(batch, this.uiViewport, customText, -8.0F, y, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);
         batch.end();
-
     }
 }

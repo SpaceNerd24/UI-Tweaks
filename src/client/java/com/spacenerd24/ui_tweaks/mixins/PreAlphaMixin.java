@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PrealphaPreamble.class)
 public class PreAlphaMixin extends GameState {
-    @Inject(method = "render", at = @At("TAIL"))
+    @Inject(method = "render", at = @At("HEAD"))
     private void create0(CallbackInfo ci) {
         if (!Constants.noPreAlpha.getValue()) {
             GameState.switchToGameState(new MainMenu());
