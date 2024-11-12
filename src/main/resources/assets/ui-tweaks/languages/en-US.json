@@ -3,9 +3,9 @@
   "major_version": 1,
   "minor_version": 0,
   "ids": [
-    "example-mod"
+    "ui-tweaks"
   ],
-  "example-mod": {
+  "ui-tweaks": {
     "priority": 1000,
     "format_templates": {
       "example": {

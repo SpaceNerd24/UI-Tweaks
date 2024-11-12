@@ -6,7 +6,8 @@
   "client": [
     "MainMenuMixin",
     "SettingsMixin",
-    "PreAlphaMixin"
+    "PreAlphaMixin",
+    "LoadingScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

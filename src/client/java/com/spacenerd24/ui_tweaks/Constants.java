@@ -15,8 +15,10 @@ public class Constants {
     public static SettingsDictionary customSettings = new SettingsDictionary();
     public static final String SETTINGS_FILE_NAME = "customGameSettings.json";
     public static final Json JSON = new Json();
+    public static final String version = "v1.1.0";
 
     public static BooleanSetting fulscreen = new BooleanSetting("fullscreen", false);;
+    public static BooleanSetting showPuzzleVersion = new BooleanSetting("showpuzzleversion", true);;
     public static BooleanSetting noPreAlpha = new BooleanSetting("noprealpha", true);;
 
     public static int windowWidth = 0;

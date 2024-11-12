@@ -1,12 +1,18 @@
 package com.spacenerd24.ui_tweaks.mixins;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.math.Vector2;
+import com.github.puzzle.game.common.Puzzle;
 import com.spacenerd24.ui_tweaks.CustomOptionsMenu;
 import finalforeach.cosmicreach.gamestates.GameState;
 import finalforeach.cosmicreach.gamestates.MainMenu;
+import finalforeach.cosmicreach.ui.FontRenderer;
 import finalforeach.cosmicreach.ui.HorizontalAnchor;
 import finalforeach.cosmicreach.ui.UIElement;
 import com.spacenerd24.ui_tweaks.Constants;
+import finalforeach.cosmicreach.ui.VerticalAnchor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -39,6 +45,34 @@ public class MainMenuMixin extends GameState {
         } else {
             Gdx.graphics.setUndecorated(false);
             Gdx.graphics.setWindowedMode(Constants.windowWidth, Constants.windowHeight);
+        }
+    }
+
+    @Inject(method = "render", at = @At("TAIL"))
+    private void render1(CallbackInfo ci) {
+        batch.setProjectionMatrix(this.uiCamera.combined);
+        batch.begin();
+        Vector2 TextDim = new Vector2();
+        float y = -60.0F;
+        String customText = "UI-Tweaks Version: " + Constants.version;
+        FontRenderer.getTextDimensions(this.uiViewport, customText, TextDim);
+        batch.setColor(Color.GRAY);
+        FontRenderer.drawText(batch, this.uiViewport, customText, -7.0F, y + 1.0F, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);
+        batch.setColor(Color.WHITE);
+        FontRenderer.drawText(batch, this.uiViewport, customText, -8.0F, y, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);
+        batch.end();
+        if (Constants.showPuzzleVersion.getValue()) {
+            batch.setProjectionMatrix(this.uiCamera.combined);
+            batch.begin();
+            Vector2 TextDim2 = new Vector2();
+            float y2 = -80.0F;
+            String customText2 = "Puzzle Loader Version: " + Puzzle.VERSION;
+            FontRenderer.getTextDimensions(this.uiViewport, customText2, TextDim2);
+            batch.setColor(Color.GRAY);
+            FontRenderer.drawText(batch, this.uiViewport, customText2, -7.0F, y2 + 1.0F, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);
+            batch.setColor(Color.WHITE);
+            FontRenderer.drawText(batch, this.uiViewport, customText2, -8.0F, y2, HorizontalAnchor.RIGHT_ALIGNED, VerticalAnchor.BOTTOM_ALIGNED);
+            batch.end();
         }
     }
 

@@ -29,6 +29,7 @@ public class SettingsMixin {
         loadCustomSettings();
         Constants.customSettings.put("fullscreen", Constants.fulscreen);
         Constants.customSettings.put("noprealpha", Constants.noPreAlpha);
+        Constants.customSettings.put("showpuzzleversion", Constants.showPuzzleVersion);
     }
 
     @Inject(method = "saveSettings", at = @At("HEAD"))
